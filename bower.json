@@ -1,0 +1,14 @@
+{
+  "name": "workspace",
+  "version": "0.0.1",
+  "authors": [
+    "Douglass Kiser <douglass.kiser@gmail.com>"
+  ],
+  "main": "server.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "d3": "~3.5.3",
+    "topojson": "~1.6.18"
+  }
+}

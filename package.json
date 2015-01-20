@@ -1,0 +1,12 @@
+{
+  "name": "real-time-location",
+  "version": "0.0.1",
+  "description": "Node, AnularJS, and D3 real-time online user location world map.",
+  "main": "server/server.js",
+  "repository": "",
+  "author": "Douglass Kiser <douglass.kiser@gmail.com>",
+  "dependencies": {
+    "express": "^3.2.6",
+    "socket.io": "^1.2.1"
+  }
+}

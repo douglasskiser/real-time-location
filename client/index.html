@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <base href="/">
+        <title>Real-Time Location</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="app/app.css" />
+    </head>   
+        <body ng-app="app" ng-controller="AppCtrl as ctrl">
+            
+            <div ng-hide="ctrl.config.isLoaded">
+                <h1>{{ctrl.config.loadingTxt}}</h1>
+            </div>
+            
+            <div ng-show="ctrl.config.isLoaded">
+                <div id="world-map" world-map user-coords="ctrl.config.coordinates"></div>
+            </div>
+            
+            
+            <script src="/socket.io/socket.io.js"></script>
+            <script src="bower_components/d3/d3.js"></script>
+            <script src="bower_components/topojson/topojson.min.js"></script>
+            <script src="bower_components/angular/angular.js"></script>
+            <script src="bower_components/angular-socket-io/socket.js"></script>
+            
+            <script src="app/app.js"></script>
+            <script src="app/app.controller.js"></script>
+            <script src="components/world-map/world-map.directive.js"></script>
+            <script src="components/d3/d3.service.js"></script>
+            <script src="components/socket/socket.service.js"></script>
+            <script src="components/geolocation/geolocation.service.js"></script>
+        </body>
+</html>
