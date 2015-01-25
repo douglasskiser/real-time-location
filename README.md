@@ -1,5 +1,5 @@
 # real-time-location
-A world map displaying users online in real-time through web-sockets.
+An Angular/NodeJS/Socket.IO app of a world map displaying users online in real-time through web-sockets.
 
 ##Setup
 Clone the repository. Then run `npm install` to install dependecies.
