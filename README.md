@@ -1,6 +1,8 @@
 # real-time-location
 An Angular/NodeJS/Socket.IO app of a world map displaying users online in real-time through web-sockets.
 
+##Example
+http://realtimelocation-dougkiser.rhcloud.com
 ##Setup
 Clone the repository. Then run `npm install` to install dependencies.
 
