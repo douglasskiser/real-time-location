@@ -1,6 +1,17 @@
-body {
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+html, body {
     width: 100%;
     height: 100%;
+    margin: 0;
+    background-color: #ccc;
+    overflow-x: hidden;
+    overflow-y: scroll; 
+}
+
+p, h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
 }
 
 path {
@@ -9,8 +20,83 @@ path {
     fill: #333;
 }
 
-#world-map {
+.map-container, #world-map, .overlay {
     width: 100%;
-    height: 100%;
+    height: auto;
     min-height: 500px;
+}
+
+.map-container {
+	background-color: #6D6E6D;
+}
+
+.overlay {
+	position: absolute;
+	background-color: #000;
+	opacity: 0.6;
+}
+
+#header {
+	width: 100%;
+	height: 50px;
+	background-color: #ccc;
+}
+
+#header h1 {
+	margin-top: 0;
+	padding-top: 5px;
+	text-align: center;
+	color: #4c4c4c;
+}
+
+.overlay p {
+	text-align: center;
+	font-size: 2.5em;
+	color: #fff;
+	margin-top: 230px;
+}
+
+.info-container {
+	width: 100%;
+	height: auto;
+	background-color: #ccc;
+	margin-top: -5px;
+	padding: 15px;
+}
+
+.info-panel h1 {
+	text-align: center;
+}
+
+.info-panel p {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	width: 70%;
+}
+
+.email {
+	text-align: center;
+	margin-top: 5em;
+}
+
+.animate-overlay.ng-enter, .animate-overlay.ng-leave {
+	-webkit-transition:0.5s linear all;
+  	transition:0.5s linear all;
+}
+
+.animate-overlay.ng-enter {
+	opacity: 0;
+}
+
+.animate-overlay.ng-enter.ng-enter-active {
+	opacity: 1;
+}
+
+.animate-overlay.ng-leave {
+	opacity: 1;
+}
+
+.animate-overlay.ng-leave.ng-leave-active {
+	opacity: 0;
 }

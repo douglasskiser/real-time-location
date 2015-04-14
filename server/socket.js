@@ -1,5 +1,3 @@
-'use strict';
-
 var users = {};
 
 module.exports = function(app, io) {

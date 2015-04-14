@@ -6,7 +6,7 @@ function AppCtrl($http, Geolocation, Socket) {
     
     vm.config = {
         isLoaded: false,
-        loadingTxt: 'Locating your position',
+        loadingTxt: 'Locating Your Position',
         coordinates: [{
             latitude: '0',
             longitude: '0'
@@ -16,7 +16,7 @@ function AppCtrl($http, Geolocation, Socket) {
     Geolocation()
         .then(function(position) {
             Socket.emit('new-user', position.coords);
-            vm.config.loadingTxt = 'Retrieving user data';
+            vm.config.loadingTxt = 'Retrieving User Data';
         });
     
     Socket.on('user-data', function(data) {

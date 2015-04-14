@@ -1,3 +1,3 @@
 /*global angular io topojson*/
 
-angular.module('app', ['btford.socket-io']);
+angular.module('app', ['ngAnimate', 'btford.socket-io']);

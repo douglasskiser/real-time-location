@@ -19,15 +19,15 @@ function WorldMap($window, D3, Topojson) {
                 .scale(200)
                 .rotate([0, 0]);
 
-            var svg = D3.select(elem[0]).append('svg')
-                .attr('width', elem[0].clientWidth)
-                .attr('height', elem[0].clientHeight);
-
             var path = D3.geo.path()
                 .projection(projection);
 
-            var g = svg.append('g');
+            var svg = D3.select(elem[0]).append('svg')
+                .attr('width', elem[0].clientWidth)
+                .attr('height', elem[0].clientHeight);
+                
 
+            var g = svg.append('g');
 
             D3.json('json/world-110m.json', function(err, topology) {
                 if (!err) {
@@ -85,17 +85,25 @@ function WorldMap($window, D3, Topojson) {
                     .attr('r', 2.5)
                     .style('fill', 'red');
             });
-            /**
+
+            function resizeMap() {
+                svg.transition()
+                    .duration(100)
+                    .attr('width', function() { return elem[0].clientWidth; })
+                    .attr('height', function() { return elem[0].clientHeight; });
+            }
+
             $window.addEventListener('resize', function() {
-                svg.attr('width', elem[0].clientWidth);
-                svg.attr('height', elem[0].clientHeight);
+                return resizeMap();
             });
-            **/
+
         }
     };
 }
 
+
 WorldMap.$inject = ['$window', 'D3', 'Topojson'];
+
 
 angular
     .module('app')
